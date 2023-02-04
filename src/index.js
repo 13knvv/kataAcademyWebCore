@@ -1,0 +1,1 @@
+const cl = (i) => console.log(i)
