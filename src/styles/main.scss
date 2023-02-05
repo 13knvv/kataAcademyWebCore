@@ -1,0 +1,19 @@
+@import '~normalize.css';
+@import '_fonts.scss';
+
+body {
+  font-family: 'Borlow-Bold';
+  background-color: rgb(179, 255, 0);
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-image: url('../img/svg/logo.svg');
+  background-size: cover;
+}
