@@ -348,4 +348,4 @@ template {
   display: none;
 }
 
-@font-face{font-family:"Borlow-Bold";src:url(53f341888560595f429a.otf) format("opentype")}.scss h2{color:#f370d7}body{font-family:"Borlow-Bold";background-color:#b3ff00}body img{width:100px;height:100px}div{width:100px;height:100px;background-image:url(f2e4a9555876e95b5113.svg);background-size:cover}
+@font-face{font-family:"Borlow-Bold";src:url(53f341888560595f429a.otf) format("opentype")}.scss h2{color:#f370d7}body{font-family:"Borlow-Bold";background-color:#b3ff00;display:flex;justify-content:center}body img{width:100px;height:100px}div{width:100px;height:100px;background-image:url(f2e4a9555876e95b5113.svg);background-size:cover}
