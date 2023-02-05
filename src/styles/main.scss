@@ -1,19 +1,21 @@
 @import '~normalize.css';
 @import '_fonts.scss';
 
+// bold - h1, tel, table button,
+// medium -  nav, nav , read/watch more, отзыв, mail, leng, ремонт карт.,th, get комер предл, footer
+//               
+// regular - body , h2, table body, bottom table <p>, 
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  font-family: 'Borlow-Bold';
-  background-color: rgb(179, 255, 0);
-
-  img {
-    width: 100px;
-    height: 100px;
-  }
+  font-family: TT Lakes;
+  font-size: 16px;
 }
 
-div {
-  width: 100px;
-  height: 100px;
-  background-image: url('../img/logo.svg');
-  background-size: cover;
-}
