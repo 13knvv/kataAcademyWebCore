@@ -3,9 +3,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const isDev = process.env.NODE_ENV === 'development' 
+const isDev = process.env.NODE_ENV === 'development'
 console.log('isDev', isDev)
-const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = (ext) =>
+  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -16,14 +17,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new HTMLWebpackPlugin({
-      template: './index.html'
-    }),
     new CleanWebpackPlugin(),
+    new HTMLWebpackPlugin({
+      template: './index.html',
+    }),
     new MiniCssExtractPlugin({
-      filename: filename('css')
-    })
-
+      filename: filename('css'),
+    }),
   ],
 
   module: {
@@ -35,10 +35,8 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {},
           },
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
+          'css-loader',
+          'sass-loader',
         ],
       },
       {
@@ -47,23 +45,40 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {},
-          }, 
-          'css-loader']
+          },
+          'css-loader',
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        // из-за этого собирается ровно через раз
+        // generator: {
+        //   filename: isDev
+        //     ? 'img/[name][ext]'
+        //     : 'img/[name].[contenthash][ext]',
+        // },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+        // generator: {
+        //   filename: isDev
+        //     ? 'fonts/[name][ext]'
+        //     : 'fonts/[name].[contenthash][ext]',
+        // },
       },
-    ]
+      {
+        test: /\.html$/,
+        use: [{ loader: 'ref-loader' }],
+      },
+    ],
   },
-  
+
   devServer: {
-    watchFiles: ["src/**/*"],
+    watchFiles: ['src/**/*'],
     port: 1310,
-    hot: isDev,
-  }
+    hot: true,
+    open: true,
+  },
 }
