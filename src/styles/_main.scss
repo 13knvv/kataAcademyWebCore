@@ -1,11 +1,31 @@
-.main__title {
+.main {
+  width: 100%;
+
+  &__title {
   border-left: 4px solid $color-border;
-  padding-left: 14px;
+  padding-left: $padding-body-breakpoint-0 - 4px;
   margin: 24px 0;
 }
+}
 
+
+
+@media screen and (min-width: $breakpoint-1) {
+  .main {
+    &__title {
+      margin-bottom: 32px;
+      padding-left: $padding-body-breakpoint-1 - 4px;
+    }
+  }
+}
 @media screen and (min-width: $breakpoint-2) {
   .main {
-    margin-top: -75px;
+    width: 1120px;
+    margin-top: -63px;
+
+    &__title {
+      margin: 8px 0;
+      padding-left: $padding-body-breakpoint-2 - 4px;
+    }
   }
 }

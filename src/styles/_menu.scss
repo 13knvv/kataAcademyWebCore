@@ -1,0 +1,51 @@
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  list-style: none;
+  padding: 0 $padding-body-breakpoint-0;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__item {
+    word-break: keep-all;
+    line-break: none;
+    white-space: nowrap;
+    padding: 8px 13px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+
+    &:hover {
+      background-color: $color-background-menu-item;
+      border-radius: 6px;
+    }
+  }
+
+  &__item--active {
+    background-color: $color-background-menu-item;
+    border: 2px solid $color-border;
+    border-radius: 6px;
+  }
+
+  &__link {
+    font-size: 16px;
+    text-decoration: none;
+    color: $color-text-menu;
+  }
+}
+
+
+@media screen and (min-width: $breakpoint-1) {
+  .menu {
+    padding: 0 $padding-body-breakpoint-1;
+  }
+}
+
+@media screen and (min-width: $breakpoint-2) {
+  .menu {
+    flex-wrap: wrap;
+    padding: 0 $padding-body-breakpoint-2;
+  }
+}

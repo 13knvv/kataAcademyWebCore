@@ -10,8 +10,15 @@ $breakpoint-1: 768px;
 $breakpoint-2: 1440px;
 $color-background-main: #f8f8f8;
 $color-background-header: #ffffff;
+$color-background-menu-item: #ffffff;
 $color-background-button: #ff3e79;
 $color-border: #41F6D7;
+$color-text-menu: #7E7E82;
+$color-text-h2: #7E7E82;
+$padding-body-breakpoint-0: 16px;
+$padding-body-breakpoint-1: 24px;
+$padding-body-breakpoint-2: 34px;
+
 
 html {
   box-sizing: border-box;
@@ -30,7 +37,6 @@ body {
 
 .wrapp {
   max-width: 1440px;
-  min-height: 100;
   margin: 0 auto;
   background-color: $color-background-main;
 }
@@ -47,3 +53,5 @@ body {
 @import 'buttons';
 @import 'nav';
 @import 'main';
+@import 'menu';
+
