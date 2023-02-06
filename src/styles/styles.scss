@@ -12,13 +12,13 @@ $color-background-main: #f8f8f8;
 $color-background-header: #ffffff;
 $color-background-menu-item: #ffffff;
 $color-background-button: #ff3e79;
-$color-border: #41F6D7;
-$color-text-menu: #7E7E82;
-$color-text-h2: #7E7E82;
+$color-border: #41f6d7;
+$color-text-body: #1b1c21;
+$color-text-menu: #7e7e82;
+$color-text-h2: #7e7e82;
 $padding-body-breakpoint-0: 16px;
 $padding-body-breakpoint-1: 24px;
 $padding-body-breakpoint-2: 34px;
-
 
 html {
   box-sizing: border-box;
@@ -33,6 +33,7 @@ body {
   font-family: 'TT Lakes', 'serif';
   font-size: 14px;
   font-weight: 500;
+  color: $color-text-body;
 }
 
 .wrapp {
@@ -44,9 +45,7 @@ body {
 @media screen and (min-width: $breakpoint-2) {
   .wrapp {
     display: flex;
-
   }
-  
 }
 
 @import 'header';
@@ -54,4 +53,5 @@ body {
 @import 'nav';
 @import 'main';
 @import 'menu';
-
+@import 'about';
+@import 'linkmore';

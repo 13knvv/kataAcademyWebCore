@@ -16,17 +16,17 @@
     padding: 8px 13px;
     margin-bottom: 5px;
     margin-right: 5px;
+    border-radius: 6px;
+    cursor: pointer;
 
     &:hover {
       background-color: $color-background-menu-item;
-      border-radius: 6px;
     }
   }
 
   &__item--active {
     background-color: $color-background-menu-item;
     border: 2px solid $color-border;
-    border-radius: 6px;
   }
 
   &__link {
@@ -34,8 +34,11 @@
     text-decoration: none;
     color: $color-text-menu;
   }
-}
 
+  &__item:hover &__link {
+    color: black;
+  }
+}
 
 @media screen and (min-width: $breakpoint-1) {
   .menu {

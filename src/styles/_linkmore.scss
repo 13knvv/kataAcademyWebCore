@@ -1,0 +1,27 @@
+.link-more {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-text-body;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.658);
+    filter: brightness(0.93);
+  }
+
+  &::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 3px;
+    left: -12px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/buttons/arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
