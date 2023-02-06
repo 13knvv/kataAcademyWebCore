@@ -1,0 +1,99 @@
+.header {
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 15px;
+  background-color: $color-background-header;
+
+  * + * {
+    margin-left: 16px;
+  }
+
+  &__left-items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right-items {
+    display: flex;
+    margin: 0;
+  }
+
+  &__buttons--group--social {
+    display: none;
+  }
+
+  &__buttons--group--order {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    span {
+      display: none;
+    }
+  }
+
+  &__buttons--group--order::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    right: 4px;
+    height: 32px;
+    border: 1px solid #EAEAEA;
+  }
+}
+
+
+@media screen and (min-width: $breakpoint-1) {
+  .header {
+
+    &__logo::before {
+      content: '';
+      display: inline-block;
+      position: relative;
+      bottom: 8px;
+      right: 20px;
+      height: 32px;
+      margin-left: 20px;
+      border: 1px solid #EAEAEA;
+    }
+    
+    &__buttons--group--social {
+      display: block;
+      margin-right: 22px;
+    }
+  
+  }
+}
+
+@media screen and (min-width: $breakpoint-2) {
+  .header {
+    justify-content: flex-end;
+    background-color: $color-background-main;
+    width: 1120px;
+    margin-top: 22px;
+
+    &__left-items {
+      display: none;
+    }
+
+    &__buttons--group--social {
+      display: none;
+    }
+
+    &__buttons--group--order {
+      .button--type--settings {
+        margin-right: 32px;
+      }
+      span {
+        display: inline;
+      }
+    }
+
+    &__buttons--group--order::before {
+      display: none;
+    }
+  }
+}

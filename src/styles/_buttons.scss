@@ -1,0 +1,31 @@
+.button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: $color-background-button;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--type {
+    &--burger {
+      background-image: url(../img/buttons/burger.svg);
+    }
+    &--call {
+      background-image: url(../img/buttons/call.svg);
+    }
+    &--message {
+      background-image: url(../img/buttons/message.svg);
+    }
+    &--profile {
+      background-image: url(../img/buttons/profile.svg);
+    }
+    &--settings {
+      background-image: url(../img/buttons/settings.svg);
+    }
+    &--search {
+      background-image: url(../img/buttons/search.svg);
+    }
+  }
+}
+

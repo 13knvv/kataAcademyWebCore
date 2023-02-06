@@ -1,0 +1,12 @@
+.nav {
+  width: 320px;
+  background-color: antiquewhite;
+  transform: translateX(-320px);
+}
+
+@media screen and (min-width: $breakpoint-1) {
+  .nav {
+    transform: translateX(0);
+  }
+  
+}

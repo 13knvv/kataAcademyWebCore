@@ -1,0 +1,11 @@
+.main__title {
+  border-left: 4px solid $color-border;
+  padding-left: 14px;
+  margin: 24px 0;
+}
+
+@media screen and (min-width: $breakpoint-2) {
+  .main {
+    margin-top: -75px;
+  }
+}

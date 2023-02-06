@@ -1,5 +1,4 @@
 import { cl } from './js/cl'
-import logo from './img/logo.svg'
-import './styles/main.scss'
+import './styles/styles.scss'
 
-cl(['it is work', logo ])
+cl(['it is work'])
