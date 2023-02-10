@@ -1,4 +1,4 @@
-.nav {
+.aside-nav {
   position: absolute;
   width: 320px;
   background-color: rgba(248, 187, 238, 0.233);
@@ -6,7 +6,7 @@
 }
 
 @media screen and (min-width: $breakpoint-2) {
-  .nav {
+  .aside-nav {
     position: relative;
     transform: translateY(0);
   }

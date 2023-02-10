@@ -1,4 +1,4 @@
-.header {
+.page-header {
   font-size: 16px;
   width: 100%;
   display: flex;
@@ -47,7 +47,7 @@
 
 
 @media screen and (min-width: $breakpoint-1) {
-  .header {
+  .page-header {
 
     &__logo::before {
       content: '';
@@ -69,7 +69,7 @@
 }
 
 @media screen and (min-width: $breakpoint-2) {
-  .header {
+  .page-header {
     justify-content: flex-end;
     background-color: $color-background-main;
     width: 1120px;

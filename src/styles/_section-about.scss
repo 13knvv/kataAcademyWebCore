@@ -1,4 +1,4 @@
-.about {
+.section-about {
   line-height: 18px;
 
   &__text {
@@ -25,7 +25,7 @@
 }
 
 @media screen and (min-width: $breakpoint-1) {
-  .about {
+  .section-about {
     display: flex;
     line-height: 20px;
 
@@ -48,7 +48,7 @@
 }
 
 @media screen and (min-width: $breakpoint-2) {
-  .about {
+  .section-about {
     &__text {
       padding-left: $padding-body-breakpoint-2;
       padding-right: $padding-body-breakpoint-2;

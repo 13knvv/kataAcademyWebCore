@@ -1,4 +1,4 @@
-.menu {
+.top-menu {
   display: flex;
   flex-wrap: nowrap;
   overflow-y: auto;
@@ -42,13 +42,13 @@
 }
 
 @media screen and (min-width: $breakpoint-1) {
-  .menu {
+  .top-menu {
     padding: 0 $padding-body-breakpoint-1;
   }
 }
 
 @media screen and (min-width: $breakpoint-2) {
-  .menu {
+  .top-menu {
     flex-wrap: wrap;
     padding: 0 $padding-body-breakpoint-2;
   }
