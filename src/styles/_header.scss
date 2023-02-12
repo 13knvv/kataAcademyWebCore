@@ -1,4 +1,4 @@
-.page-header {
+.header {
   font-size: 16px;
   width: 100%;
   display: flex;
@@ -7,30 +7,40 @@
   padding: 18px 15px;
   background-color: $color-background-header;
 
-  * + * {
-    margin-left: 16px;
-  }
 
   &__left-items {
     display: flex;
     align-items: center;
+    
+    .button {
+      margin-right: 16px;
+    }
   }
 
   &__right-items {
     display: flex;
-    margin: 0;
+    
   }
 
   &__buttons--group--social {
     display: none;
+    
+    .button {
+      margin-right: 16px;
+    }
   }
 
   &__buttons--group--order {
     display: flex;
     align-items: center;
-    margin: 0;
-    span {
-      display: none;
+    padding-left: 16px;
+
+    .button {
+      margin-right: 16px;
+    }
+
+    .button:last-child {
+      margin-right: 0;
     }
   }
 
@@ -39,15 +49,15 @@
     display: inline-block;
     position: relative;
     bottom: 2px;
-    right: 4px;
+    right: 16px;
     height: 32px;
     border: 1px solid #EAEAEA;
   }
 }
 
 
-@media screen and (min-width: $breakpoint-1) {
-  .page-header {
+@media screen and (min-width: $tablet) {
+  .header {
 
     &__logo::before {
       content: '';
@@ -61,15 +71,14 @@
     }
     
     &__buttons--group--social {
-      display: block;
-      margin-right: 22px;
+      display: flex;
     }
   
   }
 }
 
-@media screen and (min-width: $breakpoint-2) {
-  .page-header {
+@media screen and (min-width: $desktop) {
+  .header {
     justify-content: flex-end;
     background-color: $color-background-main;
     width: 1120px;
@@ -87,7 +96,7 @@
       .button--type--settings {
         margin-right: 32px;
       }
-      span {
+      .button__title {
         display: inline;
       }
     }

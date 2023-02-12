@@ -1,0 +1,31 @@
+.main {
+  width: 100%;
+
+  &__title {
+  border-left: 4px solid $color-border;
+  padding-left: $padding-body - 4px;
+  margin: 24px 0 8px;
+}
+}
+
+
+
+@media screen and (min-width: $tablet) {
+  .main {
+    &__title {
+      margin-bottom: 16px;
+      padding-left: $padding-body-tablet - 4px;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .main {
+    width: 1120px;
+    margin-top: -63px;
+
+    &__title {
+      margin: 8px 0;
+      padding-left: $padding-body-desktop - 4px;
+    }
+  }
+}

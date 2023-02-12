@@ -6,8 +6,8 @@
 //           ремонт карт.,th, get комер предл, footer
 // regular - body , h2, table body, bottom table <p>,
 
-$breakpoint-1: 768px;
-$breakpoint-2: 1440px;
+$tablet: 768px;
+$desktop: 1440px;
 $color-background-main: #f8f8f8;
 $color-background-header: #ffffff;
 $color-background-menu-item: #ffffff;
@@ -16,9 +16,9 @@ $color-border: #41f6d7;
 $color-text-body: #1b1c21;
 $color-text-menu: #7e7e82;
 $color-text-h2: #7e7e82;
-$padding-body-breakpoint-0: 16px;
-$padding-body-breakpoint-1: 24px;
-$padding-body-breakpoint-2: 34px;
+$padding-body: 16px;
+$padding-body-tablet: 24px;
+$padding-body-desktop: 34px;
 
 html {
   box-sizing: border-box;
@@ -36,22 +36,22 @@ body {
   color: $color-text-body;
 }
 
-.page-wrapp {
+.wrapp {
   max-width: 1440px;
   margin: 0 auto;
   background-color: $color-background-main;
 }
 
-@media screen and (min-width: $breakpoint-2) {
-  .page-wrapp {
+@media screen and (min-width: $desktop) {
+  .wrapp {
     display: flex;
   }
 }
 
-@import 'page-header';
+@import 'header';
 @import 'button';
-@import 'aside-nav';
-@import 'index-main';
-@import 'top-menu';
-@import 'section-about';
+@import 'sidebar';
+@import 'main';
+@import 'page-menu';
+@import 'about';
 @import 'linkmore';

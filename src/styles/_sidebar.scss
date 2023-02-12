@@ -1,13 +1,11 @@
-.aside-nav {
-  position: absolute;
+.sidebar {
   width: 320px;
   background-color: rgba(248, 187, 238, 0.233);
   transform: translateY(-220px);
 }
 
-@media screen and (min-width: $breakpoint-2) {
-  .aside-nav {
-    position: relative;
+@media screen and (min-width: $desktop) {
+  .sidebar {
     transform: translateY(0);
   }
   

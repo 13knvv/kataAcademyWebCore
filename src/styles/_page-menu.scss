@@ -1,22 +1,26 @@
-.top-menu {
-  display: flex;
-  flex-wrap: nowrap;
+.page-menu {
+  padding: 14px $padding-body;
   overflow-y: auto;
-  list-style: none;
-  padding: 0 $padding-body-breakpoint-0;
 
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 
+  &__list {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
   &__item {
     word-break: keep-all;
     line-break: none;
     white-space: nowrap;
-    padding: 8px 13px;
-    margin-bottom: 5px;
-    margin-right: 5px;
     border-radius: 6px;
     cursor: pointer;
 
@@ -31,9 +35,11 @@
   }
 
   &__link {
+    display: block;
     font-size: 16px;
     text-decoration: none;
     color: $color-text-menu;
+    padding: 8px 13px;
   }
 
   &__item:hover &__link {
@@ -41,15 +47,20 @@
   }
 }
 
-@media screen and (min-width: $breakpoint-1) {
-  .top-menu {
-    padding: 0 $padding-body-breakpoint-1;
+@media screen and (min-width: $tablet) {
+  .page-menu {
+    padding-left: $padding-body-tablet;
+    padding-right: $padding-body-tablet;
   }
 }
 
-@media screen and (min-width: $breakpoint-2) {
-  .top-menu {
-    flex-wrap: wrap;
-    padding: 0 $padding-body-breakpoint-2;
+@media screen and (min-width: $desktop) {
+  .page-menu {
+    padding-left: $padding-body-tablet;
+    padding-right: $padding-body-tablet;
+
+    &__list {
+      flex-wrap: wrap;
+    }
   }
 }
