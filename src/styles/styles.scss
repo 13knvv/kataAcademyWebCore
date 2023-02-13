@@ -20,6 +20,13 @@ $padding-body: 16px;
 $padding-body-tablet: 24px;
 $padding-body-desktop: 34px;
 
+@mixin list-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -48,6 +55,7 @@ body {
   }
 }
 
+@import 'list';
 @import 'header';
 @import 'button';
 @import 'sidebar';

@@ -4,14 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 15px;
+  padding: 18px $padding-body;
   background-color: $color-background-header;
-
 
   &__left-items {
     display: flex;
     align-items: center;
-    
+
     .button {
       margin-right: 16px;
     }
@@ -19,45 +18,42 @@
 
   &__right-items {
     display: flex;
-    
   }
 
-  &__buttons--group--social {
+  &__list .list__item {
+    margin-right: 16px;
+  }
+  &__list--group--order .list__item:last-child {
+    margin-right: 0;
+  }
+
+  &__list--group--social {
     display: none;
-    
-    .button {
-      margin-right: 16px;
-    }
+
   }
 
-  &__buttons--group--order {
+  &__list--group--order {
     display: flex;
     align-items: center;
     padding-left: 16px;
 
-    .button {
-      margin-right: 16px;
-    }
-
-    .button:last-child {
-      margin-right: 0;
-    }
   }
 
-  &__buttons--group--order::before {
+  &__list--group--order::before {
     content: '';
     display: inline-block;
     position: relative;
     bottom: 2px;
     right: 16px;
     height: 32px;
-    border: 1px solid #EAEAEA;
+    border: 1px solid #eaeaea;
   }
 }
 
-
 @media screen and (min-width: $tablet) {
   .header {
+    padding-left: $padding-body-tablet;
+    padding-right: $padding-body-tablet;
 
     &__logo::before {
       content: '';
@@ -67,13 +63,12 @@
       right: 20px;
       height: 32px;
       margin-left: 20px;
-      border: 1px solid #EAEAEA;
+      border: 1px solid #eaeaea;
     }
-    
-    &__buttons--group--social {
+
+    &__list--group--social {
       display: flex;
     }
-  
   }
 }
 
@@ -83,16 +78,18 @@
     background-color: $color-background-main;
     width: 1120px;
     margin-top: 22px;
+    padding-left: 0;
+    padding-right: $padding-body-desktop;
 
     &__left-items {
       display: none;
     }
 
-    &__buttons--group--social {
+    &__list--group--social {
       display: none;
     }
 
-    &__buttons--group--order {
+    &__list--group--order {
       .button--type--settings {
         margin-right: 32px;
       }
@@ -101,7 +98,7 @@
       }
     }
 
-    &__buttons--group--order::before {
+    &__list--group--order::before {
       display: none;
     }
   }
