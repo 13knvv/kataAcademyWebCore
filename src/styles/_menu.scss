@@ -1,0 +1,39 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 100vh;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(14, 24, 80, 0.2);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 88px;
+    padding: 0px $padding-menu-sides;
+  }
+
+  &__logo {
+    margin-left: 16px;
+    margin-right: auto;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding: 0px $padding-menu-sides;
+    padding-bottom: 32px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__buttons .list__item {
+    margin-right: 16px;
+  }
+
+  &__buttons .list__item:last-child {
+    margin-right: 0px;
+  }
+}

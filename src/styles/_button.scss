@@ -11,7 +11,7 @@
   }
 
   &:hover &__title {
-    color: $color-text-menu
+    color: $color-text-page-menu
   }
 
   &:active &__title {
@@ -57,8 +57,14 @@
     &--settings {
       background-image: url(../img/buttons/settings.svg);
     }
+    &--search-status {
+      background-image: url(../img/buttons/search-status.svg);
+    }
     &--search {
       background-image: url(../img/buttons/search.svg);
+    }
+    &--close {
+      background-image: url(../img/buttons/close.svg);
     }
   }
 }

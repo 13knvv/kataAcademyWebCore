@@ -14,11 +14,13 @@ $color-background-menu-item: #ffffff;
 $color-background-button: #ff3e79;
 $color-border: #41f6d7;
 $color-text-body: #1b1c21;
-$color-text-menu: #7e7e82;
+$color-text-page-menu: #7e7e82;
+$color-text-hover: #7e7e82;
 $color-text-h2: #7e7e82;
 $padding-body: 16px;
 $padding-body-tablet: 24px;
 $padding-body-desktop: 34px;
+$padding-menu-sides: 24px;
 
 @mixin list-reset {
   margin-top: 0;
@@ -30,6 +32,7 @@ $padding-body-desktop: 34px;
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -58,8 +61,11 @@ body {
 @import 'list';
 @import 'header';
 @import 'button';
-@import 'sidebar';
 @import 'main';
 @import 'page-menu';
 @import 'about';
 @import 'linkmore';
+@import 'nav';
+@import 'menu';
+@import 'contacts';
+@import 'lang';
