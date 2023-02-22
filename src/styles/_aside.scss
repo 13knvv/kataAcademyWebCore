@@ -1,4 +1,4 @@
-.menu {
+.aside {
   display: flex;
   flex-direction: column;
   width: 320px;
@@ -24,16 +24,12 @@
     padding-bottom: 32px;
   }
 
-  &__buttons {
-    display: flex;
+  &__social-list {
     margin-bottom: 16px;
   }
 
-  &__buttons .list__item {
-    margin-right: 16px;
-  }
-
-  &__buttons .list__item:last-child {
-    margin-right: 0px;
+  &__contacts {
+    margin-bottom: 40px;
   }
 }
+

@@ -1,4 +1,5 @@
-.lang {
+.langs {
+  @include list-reset;
   display: flex;
 
   &__item {

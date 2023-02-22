@@ -2,6 +2,7 @@
   font-size: 16px;
 
   &__list {
+    @include list-reset;
     padding: 0.1px;
     margin: 32px 0;
   }

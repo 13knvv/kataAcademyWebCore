@@ -10,20 +10,22 @@
   &__left-items {
     display: flex;
     align-items: center;
-
-    .button {
-      margin-right: 16px;
-    }
   }
 
+  &__logo {
+    margin-left: 20px;
+  }
+
+  
   &__right-items {
     display: flex;
   }
-
-  &__list .list__item {
+  
+  &__item {
     margin-right: 16px;
   }
-  &__list--group--order .list__item:last-child {
+
+  &__item:last-child {
     margin-right: 0;
   }
 
@@ -33,6 +35,7 @@
   }
 
   &__list--group--order {
+    @include list-reset;
     display: flex;
     align-items: center;
     padding-left: 16px;
@@ -68,6 +71,7 @@
 
     &__list--group--social {
       display: flex;
+      margin-right: 16px;
     }
   }
 }

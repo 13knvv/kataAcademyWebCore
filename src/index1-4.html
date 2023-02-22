@@ -8,7 +8,85 @@
   </head>
   <body>
     <div class="wrapp">
-      <nav class="nav"></nav>
+      <aside class="aside">
+        <header class="aside__header">
+          <button class="button" aria-label="Закрыть боковую панель">
+            <div class="button__logo button__logo--type--close"></div>
+          </button>
+          <a class="logo aside__logo" href="">
+            <img src="@ref(./img/logo.svg)" alt="" />
+          </a>
+          <button class="button" aria-label="Поиск">
+            <div class="button__logo button__logo--type--search"></div>
+          </button>
+        </header>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+              <a href="#" class="nav__link">Ремонт техники</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Услуги и сервисы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Корпоративным клиентам</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Продавцам техники</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Партнерам</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Производителям</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Наши сервисные центры</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <footer class="aside__footer">
+          <ul class="social-list aside__social-list">
+            <li class="social-list__item">
+              <button class="button" aria-label="Позвонить">
+                <div class="button__logo button__logo--type--call"></div>
+              </button>
+            </li>
+            <li class="social-list__item">
+              <button class="button" aria-label="Написать">
+                <div class="button__logo button__logo--type--message"></div>
+              </button>
+            </li>
+            <li class="social-list__item">
+              <button class="button" aria-label="Профиль">
+                <div class="button__logo button__logo--type--profile"></div>
+              </button>
+            </li>
+          </ul>
+          <address class="contacts aside__contacts">
+            <a class="contacts__link" href="mailto:mail@cps.com" lang="en">
+              mail@cps.com
+            </a>
+            <a class="contacts__link" href="tel:88008908900">
+              8 800 890 8900
+            </a>
+          </address>
+          <ul class="langs">
+            <li class="langs__item langs__item--active">
+              <button class="langs__button" lang="en">RU</button>
+            </li>
+            <li class="langs__item">
+              <button class="langs__button" lang="en">EN</button>
+            </li>
+            <li class="langs__item">
+              <button class="langs__button" lang="en">CH</button>
+            </li>
+          </ul>
+        </footer>
+      </aside>
       <div>
         <header class="header">
           <div class="header__left-items">
@@ -20,31 +98,31 @@
             </a>
           </div>
           <div class="header__right-items">
-            <ul class="list header__list header__list--group--social">
-              <li class="list__item">
+            <ul class="social-list header__list header__list--group--social">
+              <li class="social-list__item">
                 <button class="button" aria-label="Позвонить">
                   <div class="button__logo button__logo--type--call"></div>
                 </button>
               </li>
-              <li class="list__item">
+              <li class="social-list__item">
                 <button class="button" aria-label="Написать">
                   <div class="button__logo button__logo--type--message"></div>
                 </button>
               </li>
-              <li class="list__item">
+              <li class="social-list__item">
                 <button class="button" aria-label="Профиль">
                   <div class="button__logo button__logo--type--profile"></div>
                 </button>
               </li>
             </ul>
-            <ul class="list header__list header__list--group--order">
-              <li class="list__item">
+            <ul class="header__list header__list--group--order">
+              <li class="header__item">
                 <button class="button" aria-label="Оставить заявку">
                   <span class="button__title">Оставить заявку</span>
                   <div class="button__logo button__logo--type--settings"></div>
                 </button>
               </li>
-              <li class="list__item">
+              <li class="header__item">
                 <button class="button" aria-label="Статус ремонта">
                   <span class="button__title">Статус ремонта</span>
                   <div class="button__logo button__logo--type--search-status"></div>

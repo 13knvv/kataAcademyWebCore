@@ -58,7 +58,8 @@ body {
   }
 }
 
-@import 'list';
+
+@import 'social-list';
 @import 'header';
 @import 'button';
 @import 'main';
@@ -66,6 +67,6 @@ body {
 @import 'about';
 @import 'linkmore';
 @import 'nav';
-@import 'menu';
+@import 'aside';
 @import 'contacts';
-@import 'lang';
+@import 'langs';
