@@ -1,0 +1,21 @@
+.grid {
+  @include list-reset;
+  
+}
+
+@media screen and (min-width: $tablet) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 32px;
+    max-height: 160px;
+    overflow: hidden;
+    transition: max-height 900ms ;
+  }
+}
+
+@media screen and (min-width: 1120px) { //$desktop
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

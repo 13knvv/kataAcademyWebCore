@@ -1,0 +1,16 @@
+.brands {
+  
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    padding: 14px 16px;
+    background-color: #fff;
+
+  }
+
+  &__img {
+    max-height: 100%;
+  }
+}
