@@ -1,6 +1,7 @@
-import { cl } from './js/cl'
 import './styles/styles.scss'
 import { showMore } from './js/show-more'
+import { initSwiper } from './js/init-swiper'
 
-cl(['it is work'])
+
 showMore()
+initSwiper()

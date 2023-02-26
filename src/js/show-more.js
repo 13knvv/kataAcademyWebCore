@@ -1,5 +1,3 @@
-import {cl} from './cl'
-
 export function showMore() {
   const btnMore = document.querySelectorAll('.btn-more')
 
@@ -22,7 +20,5 @@ export function showMore() {
       btn.textContent = 'Показать все'
       btn.classList.remove('btn-more--showed')
     }
-
-    cl(btn.previousElementSibling.style.maxHeight)
   }
 }

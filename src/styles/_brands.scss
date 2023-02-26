@@ -4,13 +4,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    width: 240px;
     height: 72px;
     padding: 14px 16px;
     background-color: #fff;
-
   }
 
   &__img {
     max-height: 100%;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .brands {
+    &__item {
+      width: auto;
+    }
   }
 }
