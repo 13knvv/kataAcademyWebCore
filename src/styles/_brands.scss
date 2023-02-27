@@ -18,6 +18,8 @@
 
 @media screen and (min-width: $tablet) {
   .brands {
+    max-height: 160px;
+
     &__item {
       width: auto;
     }

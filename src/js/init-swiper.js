@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 export function initSwiper() {
   const width = document.documentElement.clientWidth;
 
-  if (width <= 768) {
+  if ( width <= 768 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ) {
     const swiper = new Swiper(".swiper", {
       modules: [Pagination],
       pagination: {
@@ -30,3 +30,4 @@ export function initSwiper() {
     document.querySelector(".swiper-pagination").remove();
   }
 }
+

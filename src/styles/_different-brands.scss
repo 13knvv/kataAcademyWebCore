@@ -4,6 +4,8 @@
   max-width: 1120px;
   margin: 0 auto;
     //////////
+    padding-bottom: 24px;
+    
   &__grid {
     margin-top: 16px;
   }
@@ -15,6 +17,8 @@
 
 @media screen and (min-width: $tablet) {
   .different-brands {
+    padding-bottom: 32px;
+
     &__grid {
       margin-top: 24px;
     }
