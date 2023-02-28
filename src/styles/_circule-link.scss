@@ -4,6 +4,7 @@
   height: 40px;
   border: 2px solid $color-background-button;
   border-radius: 50%;
+  transition: filter 300ms ease;
 
   &::after {
     content: '';

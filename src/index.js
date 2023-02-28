@@ -1,7 +1,7 @@
 import './styles/styles.scss'
-import { showMore } from './js/show-more'
+import { btnShowMore } from './js/btn-show-more'
 import { initSwiper } from './js/init-swiper'
 
 
-showMore()
+btnShowMore()
 initSwiper()

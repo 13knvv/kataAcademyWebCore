@@ -1,4 +1,4 @@
-export function showMore() {
+export function btnShowMore() {
   const btnMore = document.querySelectorAll('.btn-more')
 
   for (let i = 0; i < btnMore.length; i++) {

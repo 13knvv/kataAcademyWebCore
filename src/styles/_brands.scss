@@ -22,6 +22,12 @@
 
     &__item {
       width: auto;
+      transition: all 400ms ease;
+    } 
+
+    &__item:hover {
+      transform: scale(1.05);
     }
+    
   }
 }
