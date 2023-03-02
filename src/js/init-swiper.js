@@ -1,33 +1,36 @@
-import Swiper, { Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
+import Swiper, {Pagination} from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 export function initSwiper() {
-  const width = document.documentElement.clientWidth;
+  const width = document.documentElement.clientWidth
 
-  if ( width <= 768 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ) {
-    const swiper = new Swiper(".swiper", {
+  if (width <= 768 ) {
+    const swiper = new Swiper('.swiper', {
       modules: [Pagination],
       pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
+        el: '.swiper-pagination',
+        type: 'bullets',
         clickable: true,
       },
       loop: true,
       observer: true,
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       speed: 400,
       spaceBetween: 16,
-      effect: "slide",
-    });
+      effect: 'slide',
+    })
   }
 
   if (width >= 768) {
-    document.querySelector(".swiper").classList.remove("swiper");
-    document
-      .querySelector(".swiper-wrapper")
-      .classList.remove("swiper-wrapper");
-    document.querySelector(".swiper-pagination").remove();
+    document.querySelector('.swiper').classList.remove('swiper')
+    document.querySelector('.swiper-wrapper').classList.remove('swiper-wrapper')
+    document.querySelector('.swiper-pagination').remove()
+    const slides = document.querySelectorAll('.swiper-slide')
+    
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove('swiper-slide')
+    }
+    
   }
 }
-
