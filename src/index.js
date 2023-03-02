@@ -5,3 +5,4 @@ import { btnShowMore } from './js/btn-show-more'
 
 btnShowMore()
 initSwiper()
+window.addEventListener('resize', initSwiper)

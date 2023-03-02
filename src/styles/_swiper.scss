@@ -1,11 +1,8 @@
 .swiper {
-  //padding-left: 16px;
-
-  &--inside--different-brands {
-    min-height: 120px;
+  min-height: 120px;
+  
+  &-wrapper {
+    width: auto;
   }
   
-  &-slide {
-    //width: auto !important;
-  }
 }
