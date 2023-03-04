@@ -1,4 +1,19 @@
 .brands {
+    ////////
+  background-color: #f8f8f8;
+  max-width: 1120px;
+  margin: 0 auto;
+    //////////
+  padding-bottom: 24px;
+    
+  &__list {
+    min-height: 120px;
+    margin-top: 16px;
+  }
+
+  &__btn-more {
+    display: none;
+  }
   
   &__item {
     display: flex;
@@ -18,7 +33,12 @@
 
 @media screen and (min-width: $tablet) {
   .brands {
-    max-height: 160px;
+    padding-bottom: 32px;
+
+    &__list {
+      max-height: 160px;
+      margin-top: 24px;
+    }
 
     &__item {
       margin-right: 0;
@@ -29,6 +49,19 @@
     &__item:hover {
       transform: scale(1.05);
     }
-    
+
+    &__btn-more {
+      display: block;
+      margin-top: 24px;
+      margin-left: $padding-body-tablet;
+    }
+  }
+}
+
+@media screen and (min-width: 1120px) { //$desktop
+  .brands {
+    &__btn-more {
+      margin-left: $padding-body-desktop;
+    }
   }
 }
