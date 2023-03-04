@@ -66,6 +66,22 @@
     &--close {
       background-image: url(../img/ico-close.svg);
     }
+    &--circule-link {
+      background: none;
+      border: 2px solid $color-background-button;
+      border-radius: 50%;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $color-background-button;
+        border-right: 2px solid $color-background-button;
+        transform: translate(12px, 12.5px) rotate(45deg);
+      }
+      
+    }
   }
 }
 
