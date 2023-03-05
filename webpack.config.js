@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
-console.log('isDev', isDev)
+
 const filename = (ext) =>
   isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`
 
@@ -16,6 +16,7 @@ module.exports = {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist'),
   },
+  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
@@ -31,23 +32,22 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {},
-          },
+          MiniCssExtractPlugin.loader,
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['autoprefixer']],
+              },
+            },
+          },
           'sass-loader',
         ],
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {},
-          },
-          'css-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -77,7 +77,7 @@ module.exports = {
 
   devServer: {
     watchFiles: ['src/**/*'],
-    port: 1310,
+    port: 777,
     hot: true,
     open: true,
   },
