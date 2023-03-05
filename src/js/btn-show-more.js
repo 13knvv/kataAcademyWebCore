@@ -9,7 +9,7 @@ export function btnShowMore() {
     const content = btn.previousElementSibling
     content.classList.toggle('drop-down-grid--open')
     // в drop-down-grid--open задан max-heigth: 1000px; (все что кроме px не работает transition)
-    // поэтому  быстро окрывается и долго закрывается. если задавать настоящую высоту то будет плавно. 
+    // поэтому  быстро окрывается и долго закрывается. если задавать настоящую высоту то будет плавно.
     //const fullHeight = content.scrollHeight
 
     if (content.classList.contains('drop-down-grid--open')) {

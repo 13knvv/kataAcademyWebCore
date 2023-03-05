@@ -1,4 +1,4 @@
-import Swiper, {Pagination} from 'swiper'
+import Swiper, { Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -22,11 +22,11 @@ export function initSwiper() {
       768: {
         spaceBetween: 0,
       },
-    }
+    },
   })
 
   if (width >= 768) {
-    swiper.destroy( true , true )
+    swiper.destroy(true, true)
     swiper.disable()
   }
 }
