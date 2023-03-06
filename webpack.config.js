@@ -35,11 +35,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              ['@babel/preset-env', { targets: "defaults" }]
-            ]
-          }
-        }
+            presets: [['@babel/preset-env', { targets: 'defaults' }]],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
@@ -64,21 +62,10 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-        // из-за этого собирается ровно через раз
-        // generator: {
-        //   filename: isDev
-        //     ? 'img/[name][ext]'
-        //     : 'img/[name].[contenthash][ext]',
-        // },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-        // generator: {
-        //   filename: isDev
-        //     ? 'fonts/[name][ext]'
-        //     : 'fonts/[name].[contenthash][ext]',
-        // },
       },
       {
         test: /\.html$/,
