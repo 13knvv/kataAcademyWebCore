@@ -7,9 +7,10 @@
 // regular - body , h2, table body, bottom table <p>,
 
 $tablet: 768px;
-$desktop: 1366px;
+$desktop: 1440px;
 $color-background-main: #f8f8f8;
 $color-background-header: #ffffff;
+$color-background-aside: #ffffff;
 $color-background-menu-item: #ffffff;
 $color-background-button: #ff3e79;
 $color-border: #41f6d7;
@@ -46,18 +47,7 @@ body {
   color: $color-text-body;
 }
 
-.wrapp {
-  max-width: 1440px;
-  margin: 0 auto;
-  background-color: $color-background-main;
-}
-
-@media screen and (min-width: $desktop) {
-  .wrapp {
-    display: flex;
-  }
-}
-
+@import 'page-wrapp';
 @import 'social-list';
 @import 'header';
 @import 'button';

@@ -11,7 +11,7 @@
   }
 
   &:hover &__title {
-    color: $color-text-page-menu
+    color: $color-text-page-menu;
   }
 
   &:active &__title {
@@ -41,32 +41,56 @@
     display: none;
   }
 
-  &__logo--type {
-    &--burger {
+  &--type--burger {
+    .button__logo {
       background-image: url(../img/ico-burger.svg);
     }
-    &--call {
+  }
+
+  &--type--call {
+    .button__logo {
       background-image: url(../img/ico-call.svg);
     }
-    &--message {
+  }
+
+  &--type--message {
+    .button__logo {
       background-image: url(../img/ico-message.svg);
     }
-    &--profile {
+  }
+
+  &--type--profile {
+    .button__logo {
       background-image: url(../img/ico-profile.svg);
     }
-    &--settings {
+  }
+
+  &--type--settings {
+    .button__logo {
       background-image: url(../img/ico-settings.svg);
     }
-    &--search-status {
+  }
+
+  &--type--search-status {
+    .button__logo {
       background-image: url(../img/ico-search-status.svg);
     }
-    &--search {
+  }
+
+  &--type--search {
+    .button__logo {
       background-image: url(../img/ico-search.svg);
     }
-    &--close {
+  }
+
+  &--type--close {
+    .button__logo {
       background-image: url(../img/ico-close.svg);
     }
-    &--circule-link {
+  }
+
+  &--type--circule-link {
+    .button__logo {
       background: none;
       border: 2px solid $color-background-button;
       border-radius: 50%;
@@ -80,7 +104,6 @@
         border-right: 2px solid $color-background-button;
         transform: translate(12px, 12.5px) rotate(45deg);
       }
-      
     }
   }
 }

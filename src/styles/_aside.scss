@@ -3,8 +3,13 @@
   flex-direction: column;
   width: 320px;
   min-height: 100vh;
+  background-color: $color-background-aside;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(14, 24, 80, 0.2);
+
+  @media screen and (min-width: $desktop) {
+    box-shadow: none;
+  }
 
   &__header {
     display: flex;
@@ -13,9 +18,19 @@
     padding: 0px $padding-menu-sides;
   }
 
+  &__close {
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
   &__logo {
     margin-left: 16px;
     margin-right: auto;
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 0px;
+    }
   }
 
   &__footer {
@@ -31,5 +46,6 @@
   &__contacts {
     margin-bottom: 40px;
   }
-}
 
+
+}
