@@ -53,7 +53,7 @@
     }
   }
 
-  &--type--message {
+  &--type--feedback {
     .button__logo {
       background-image: url(../img/ico-message.svg);
     }
@@ -83,7 +83,8 @@
     }
   }
 
-  &--type--close {
+  &--type--close,
+  &--type--close-modal {
     .button__logo {
       background-image: url(../img/ico-close.svg);
     }
@@ -104,6 +105,22 @@
         border-right: 2px solid $color-background-button;
         transform: translate(12px, 12.5px) rotate(45deg);
       }
+    }
+  }
+
+  &--type--text {
+    .button__logo {
+      background-image: url(../img/ico-button-type-text.svg);
+      background-repeat: no-repeat;
+      background-position: 85%;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 16px;
+      width: auto;
+      height: auto;
+      padding: 12px 18px;
+      padding-right: 36px;
+      color: #fff;
     }
   }
 }

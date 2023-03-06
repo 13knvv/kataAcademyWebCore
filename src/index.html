@@ -10,7 +10,6 @@
 
 <body>
   <div class="page-wrapp">
-    <div class="modal-background"></div>
     <aside class="aside page-wrapp__aside">
       <header class="aside__header">
         <button class="button  button--type--close aside__close" aria-label="Закрыть боковую панель">
@@ -59,7 +58,7 @@
             </button>
           </li>
           <li class="social-list__item">
-            <button class="button button--type--message" aria-label="Написать">
+            <button class="button button--type--feedback" aria-label="Написать">
               <div class="button__logo"></div>
             </button>
           </li>
@@ -108,7 +107,7 @@
               </button>
             </li>
             <li class="social-list__item">
-              <button class="button button--type--message" aria-label="Написать">
+              <button class="button button--type--feedback" aria-label="Написать">
                 <div class="button__logo"></div>
               </button>
             </li>
@@ -136,7 +135,7 @@
       </header>
       <main class="main">
         <div class="main__header">
-          <h1 class="main__title">Услуги и сервисы</h1>
+          <h1 class="title main__title">Услуги и сервисы</h1>
           <nav class="page-menu">
             <ul class="page-menu__list">
               <li class="page-menu__item page-menu__item--active">
@@ -264,8 +263,30 @@
         </section>
       </main>
 
+
       <footer></footer>
     </div>
+  </div>
+  <div class="modal-background"></div>
+  <div class="modal modal--type--feedback">
+    <button class="button button--type--close-modal modal__close">
+      <div class="button__logo"></div>
+    </button>
+    <h1 class="title modal__title">Обратная связь</h1>
+    <form class="form">
+      <input class="form__field" type="text" placeholder="Имя" >
+      <input class="form__field"  type="number" placeholder="Телефон" >
+      <input class="form__field"  type="text" placeholder="Электронная почта" >
+      <textarea class="form__field form__field--type--textarea"  placeholder="Сообщение"></textarea>
+      <div class="form__agreement">
+        Нажимая “отправить”, вы даете согласие на 
+        <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь 
+        с нашей <a href="#" class="form__link">политикой конфиденциальности</a>
+      </div>
+      <button class="form__button button button--type--text" type="submit">
+        <div class="button__logo">ОТПРАВИТЬ</div>
+      </button>
+    </form>
   </div>
 </body>
 

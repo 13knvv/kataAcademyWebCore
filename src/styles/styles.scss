@@ -10,10 +10,12 @@ $tablet: 768px;
 $desktop: 1440px;
 $color-background-main: #f8f8f8;
 $color-background-header: #ffffff;
-$color-background-aside: #ffffff;
+$color-background-modal: #ffffff;
 $color-background-menu-item: #ffffff;
 $color-background-button: #ff3e79;
 $color-border: #41f6d7;
+$color-border-field: #eaeaea;
+$color-text-placeholder: #B5B6BC;
 $color-text-body: #1b1c21;
 $color-text-page-menu: #7e7e82;
 $color-text-hover: #7e7e82;
@@ -51,6 +53,7 @@ body {
 @import 'social-list';
 @import 'header';
 @import 'button';
+@import 'title';
 @import 'main';
 @import 'page-menu';
 @import 'about';
@@ -64,3 +67,5 @@ body {
 @import 'swiper';
 @import 'section-title';
 @import 'modal-background';
+@import 'modal';
+@import 'form';
