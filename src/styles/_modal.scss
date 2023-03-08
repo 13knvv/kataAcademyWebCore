@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 10;
@@ -8,8 +8,10 @@
   max-width: 440px;
   min-height: 100vh;
   background-color: $color-background-modal;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
 
-  &--type--feedback.modal--open {
+  &--open.modal--type--feedback {
     transform: translate(0);
   }
 
@@ -18,7 +20,7 @@
     margin-left: 16px;
 
     @media screen and (min-width: $tablet) {
-      position: absolute;
+      position: fixed;
       left: -48px;
       top: 40px;
       margin: 0;
@@ -29,5 +31,14 @@
     font-size: 24px;
     margin-top: 40px;
     margin-bottom: 24px;
+  }
+}
+
+@keyframes modal-background-open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.96;
   }
 }

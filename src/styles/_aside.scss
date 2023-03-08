@@ -11,6 +11,23 @@
     box-shadow: none;
   }
 
+  &--positioned {
+    position: absolute;
+    transition: transform 600ms ease;
+    transform: translate(-100%);
+    z-index: 10;
+    
+    @media screen and (min-width: $desktop) {
+      position: static;
+      transform: none;
+      z-index: 0;
+    }
+  }
+
+  &--positioned--open {
+    transform: translate(0);
+  }
+
   &__header {
     display: flex;
     align-items: center;

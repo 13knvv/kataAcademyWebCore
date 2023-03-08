@@ -1,5 +1,6 @@
+import { modalBackground } from './modal-background'
+
 export function aside() {
-  const modalBackground = document.querySelector('.modal-background')
   const aside = document.querySelector('.aside')
   const burger = document.querySelector('.button--type--burger')
   const close = document.querySelector('.aside__close')
@@ -8,12 +9,12 @@ export function aside() {
   close.addEventListener('click', asideClose)
 
   function asideOpen() {
-    aside.classList.add('page-wrapp__aside--open')
-    modalBackground.classList.add('modal-background--open')
+    aside.classList.add('aside--positioned--open')
+    modalBackground()
   }
 
   function asideClose() {
-    aside.classList.remove('page-wrapp__aside--open')
-    modalBackground.classList.remove('modal-background--open')
+    aside.classList.remove('aside--positioned--open')
+    modalBackground()
   }
 }
