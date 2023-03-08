@@ -1,12 +1,12 @@
 export function modalBackground() {
   const modalBackground = document.querySelector('.modal-background')
   const modals = document.querySelectorAll('.modal')
-  const aside = document.querySelector('.aside')
+  //const aside = document.querySelector('.aside')
   let isOpen = false
 
-  if (aside.classList.contains('aside--positioned--open')) {
-    isOpen = true
-  }
+  // if (aside.classList.contains('aside--positioned--open')) {
+  //   isOpen = true
+  // }
 
   for (let i = 0; i < modals.length; i++) {
     const modal = modals[i]

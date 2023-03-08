@@ -1,11 +1,11 @@
 import { initSwiper } from './js/init-swiper'
 import './styles/styles.scss'
 import { btnShowMore } from './js/btn-show-more'
-import { aside } from './js/aside'
-import { modal } from './js/modal'
+import { modalFeedback } from './js/modal-feedback'
+import { modalAside } from './js/modal-aside'
 
-aside()
 btnShowMore()
 initSwiper()
 window.addEventListener('resize', initSwiper)
-modal()
+modalFeedback()
+modalAside()
