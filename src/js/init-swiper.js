@@ -5,7 +5,7 @@ import 'swiper/css/pagination'
 export function initSwiper() {
   const width = document.documentElement.clientWidth
 
-  const swiper = new Swiper('.swiper', {
+  let swipers = new Swiper('.swiper', {
     modules: [Pagination],
     pagination: {
       el: '.swiper-pagination',
@@ -26,7 +26,6 @@ export function initSwiper() {
   })
 
   if (width >= 768) {
-    swiper.destroy(true, true)
-    swiper.disable()
+    swipers.forEach((swiper) => swiper.destroy(true, true))
   }
 }

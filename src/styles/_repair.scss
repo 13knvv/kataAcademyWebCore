@@ -1,8 +1,13 @@
-.brands {
+.repair {
   padding-bottom: 24px;
     
-  &__list {
+  &__brands {
     min-height: 120px;
+    margin-top: 16px;
+  }
+
+  &__technics {
+    min-height: 210px;
     margin-top: 16px;
   }
 
@@ -10,33 +15,23 @@
     display: none;
   }
   
-  &__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    width: 240px;
-    height: 72px;
-    padding: 14px 16px;
-    background-color: #fff; 
-  }
-
-  &__img {
-    max-height: 100%;
-  }
 }
 
 @media screen and (min-width: $tablet) {
-  .brands {
+  .repair {
     padding-bottom: 32px;
 
-    &__list {
+    &__brands, &__technics {
       max-height: 160px;
       margin-top: 24px;
     }
 
+    &__technics {
+      min-height: 160px;
+      margin-top: 16px;
+    }
+
     &__item {
-      margin-right: 0;
       width: auto;
       transition: all 400ms ease;
     } 
@@ -53,8 +48,8 @@
   }
 }
 
-@media screen and (min-width: 1120px) { //$desktop
-  .brands {
+@media screen and (min-width: $desktop) {
+  .repair {
     &__btn-more {
       margin-left: $padding-body-desktop;
     }
