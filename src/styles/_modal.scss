@@ -1,5 +1,11 @@
 .modal {
-  &--type--feedback {
+  max-width: 440px;
+  min-height: 100vh;
+  background-color: $color-background-modal;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+    
+  &--type--feedback, &--type--call {
     position: fixed;
     top: 0;
     right: 0;
@@ -8,11 +14,11 @@
     transition: transform 600ms ease;
   }
 
-  &--open.modal--type--feedback {
+  &--open.modal--type--feedback, &--open.modal--type--call {
     transform: translate(0);
   }
 
-  &--type--feedback {
+  &--type--feedback, &--type--call {
     .modal__close {
       margin-top: 24px;
       margin-left: 16px;

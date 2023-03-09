@@ -2,11 +2,13 @@ export function modals() {
   /// all btns open
   const btnOpenAside = document.querySelector('.button--type--burger')
   const btnsOpenFeedback = document.querySelectorAll('.button--type--feedback')
+  const btnsOpenCall = document.querySelectorAll('.button--type--call')
   /// all btns close
   const btnsClose = document.querySelectorAll('.modal__close')
   /// all modals
   const aside = document.querySelector('.modal--type--aside')
   const feedback = document.querySelector('.modal--type--feedback')
+  const call = document.querySelector('.modal--type--call')
   const allModals = document.getElementsByClassName('modal')
   // background
   const modalBackground = document.querySelector('.modal-background')
@@ -16,6 +18,10 @@ export function modals() {
 
   for (let i = 0; i < btnsOpenFeedback.length; i++) {
     btnsOpenFeedback[i].addEventListener('click', openFeedback)
+  }
+
+  for (let i = 0; i < btnsOpenCall.length; i++) {
+    btnsOpenCall[i].addEventListener('click', openCall)
   }
 
   for (let i = 0; i < btnsClose.length; i++) {
@@ -35,6 +41,12 @@ export function modals() {
     closeAllModals()
     openBackground()
     feedback.classList.add('modal--open')
+  }
+
+  function openCall() {
+    closeAllModals()
+    openBackground()
+    call.classList.add('modal--open')
   }
 
   function closeModal(e) {
