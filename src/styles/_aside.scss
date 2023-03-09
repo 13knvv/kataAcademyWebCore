@@ -18,12 +18,6 @@
     padding: 0px $padding-menu-sides;
   }
 
-  &__close {
-    @media screen and (min-width: $desktop) {
-      display: none;
-    }
-  }
-
   &__logo {
     margin-left: 16px;
     margin-right: auto;

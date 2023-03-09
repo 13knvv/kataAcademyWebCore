@@ -83,8 +83,7 @@
     }
   }
 
-  &--type--close,
-  &--type--close-modal {
+  &--type--close {
     .button__logo {
       background-image: url(../img/ico-close.svg);
     }

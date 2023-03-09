@@ -6,15 +6,24 @@
     z-index: 10;
     transform: translate(115%);
     transition: transform 600ms ease;
-    max-width: 440px;
-    min-height: 100vh;
-    background-color: $color-background-modal;
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
-      16px 0px 52px rgba(14, 24, 80, 0.2);
   }
 
   &--open.modal--type--feedback {
     transform: translate(0);
+  }
+
+  &--type--feedback {
+    .modal__close {
+      margin-top: 24px;
+      margin-left: 16px;
+
+      @media screen and (min-width: $tablet) {
+        position: absolute;
+        left: -60px;
+        top: 33px;
+        margin: 0;
+      }
+    }
   }
 
   &--type--aside {
@@ -22,7 +31,7 @@
     transition: transform 600ms ease;
     transform: translate(-100%);
     z-index: 10;
-    
+
     @media screen and (min-width: $desktop) {
       position: static;
       transform: none;
@@ -34,15 +43,11 @@
     transform: translate(0);
   }
 
-  &__close {
-    margin-top: 24px;
-    margin-left: 16px;
-
-    @media screen and (min-width: $tablet) {
-      position: fixed;
-      left: -48px;
-      top: 40px;
-      margin: 0;
+  &--type--aside {
+    .modal__close {
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
     }
   }
 
