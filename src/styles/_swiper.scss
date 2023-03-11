@@ -1,6 +1,15 @@
 .swiper {
   &-wrapper {
     width: auto;
+
+    padding-left: 16px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 0 $padding-body-tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0 $padding-body-desktop;
+    }
   }
-  
 }

@@ -12,7 +12,6 @@ export function initSwiper() {
       type: 'bullets',
       clickable: true,
     },
-    loop: true,
     observer: true,
     slidesPerView: 'auto',
     speed: 400,

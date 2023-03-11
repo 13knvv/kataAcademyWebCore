@@ -1,6 +1,5 @@
 .drop-down-grid {
   @include list-reset;
-  padding-left: 16px;
 }
 
 @media screen and (min-width: $tablet) {
@@ -8,7 +7,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 32px;
-    padding: 0 $padding-body-tablet;
     overflow: hidden;
     transition: all 900ms ease;
 
@@ -18,9 +16,8 @@
   }
 }
 
-@media screen and (min-width: 1120px) { //$desktop
+@media screen and (min-width: $desktop) {
   .drop-down-grid {
     grid-template-columns: repeat(4, 1fr);
-    padding: 0 $padding-body-desktop;
   }
 }
