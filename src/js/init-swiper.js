@@ -16,6 +16,7 @@ export function initSwiper() {
     slidesPerView: 'auto',
     speed: 400,
     spaceBetween: 16,
+    loop: true,
 
     breakpoints: {
       768: {

@@ -16,7 +16,7 @@ $color-background-card: #ffffff;
 $color-background-button: #ff3e79;
 $color-border: #41f6d7;
 $color-border-field: #eaeaea;
-$color-text-placeholder: #B5B6BC;
+$color-text-placeholder: #b5b6bc;
 $color-text-body: #1b1c21;
 $color-text-page-menu: #7e7e82;
 $color-text-hover: #7e7e82;
@@ -34,6 +34,33 @@ $padding-menu-sides: 24px;
   list-style: none;
 }
 
+@mixin adaptive-paddings-body-left-right {
+  padding-left: $padding-body;
+  padding-right: $padding-body;
+
+  @media screen and (min-width: $tablet) {
+    padding-left: $padding-body-tablet;
+    padding-right: $padding-body-tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-left: $padding-body-desktop;
+    padding-right: $padding-body-desktop;
+  }
+}
+
+@mixin adaptive-paddings-section-bottom {
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 50px;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -47,7 +74,7 @@ html {
 body {
   font-family: 'TT Lakes', 'serif';
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: $color-text-body;
 }
 
@@ -75,3 +102,5 @@ body {
 @import 'form';
 @import 'price';
 @import 'prices';
+@import 'prices-for-services';
+@import 'footer'

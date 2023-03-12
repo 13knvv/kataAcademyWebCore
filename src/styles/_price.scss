@@ -1,9 +1,13 @@
 .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 260px;
   padding: 16px;
   background-color: $color-background-card;
   border-radius: 6px;
   box-sizing: border-box;
+  height: auto;
 
   @media screen and (min-width: $tablet) {
     position: relative;
@@ -13,6 +17,11 @@
     align-items: baseline;
     width: 100%;
     border-radius: 0;
+    transition: all 600ms;
+
+    &:hover {
+      background-color: $color-background-main;
+    }
   }
 
   &:nth-child(2){

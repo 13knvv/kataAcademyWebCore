@@ -1,5 +1,5 @@
 .repair {
-  padding-bottom: 24px;
+  @include adaptive-paddings-section-bottom;
     
   &__brands {
     min-height: 120px;
@@ -19,8 +19,6 @@
 
 @media screen and (min-width: $tablet) {
   .repair {
-    padding-bottom: 32px;
-
     &__brands, &__technics {
       max-height: 160px;
       margin-top: 24px;

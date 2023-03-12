@@ -1,6 +1,7 @@
 .about {
   line-height: 18px;
   padding-top: 10px;
+  @include adaptive-paddings-section-bottom;
 
   &__inner {
     padding-left: $padding-body;
