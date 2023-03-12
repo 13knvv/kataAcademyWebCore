@@ -3,6 +3,11 @@
 
   &-wrapper {
     width: auto;
-    @include adaptive-paddings-body-left-right
+    margin-top: 16px;
+    @include adaptive-paddings-body-left-right;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 24px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .section-title {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
   color: $color-text-h2;
@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (min-width: 1120px) { //$desktop
+@media screen and (min-width: $desktop) {
   .section-title {
     padding: 16px $padding-body-desktop;
   }
